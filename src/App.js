@@ -2,6 +2,7 @@ import React,{Component} from 'react';
 import logo from './logo.svg';
 import CardList from './components/cardlist/Cardlist';
 import SearchBox from './components/search-box/search-box.component';
+import Scroll from './components/scroll/scroll.component';
 import './App.css';
 
 class App extends Component {
@@ -25,7 +26,10 @@ class App extends Component {
 
           <SearchBox placeholder="Search Monsters" handleChange={ e=> {
           this.setState({searchField:e.target.value},()=>console.log(this.state))}}></SearchBox>
+      <Scroll>
       <CardList users={filteredUsers} />
+
+      </Scroll>
        </div>
     )
   };
